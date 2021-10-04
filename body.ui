@@ -70,7 +70,7 @@
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>170</y>
+      <y>200</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -83,7 +83,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>170</y>
+      <y>200</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -92,30 +92,30 @@
      <string>cos</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="copyBButton">
     <property name="geometry">
      <rect>
-      <x>320</x>
+      <x>240</x>
       <y>60</y>
       <width>71</width>
       <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>Copy to B</string>
+     <string>Copy  B</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_8">
+   <widget class="QPushButton" name="copyAButton">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>20</y>
+      <x>170</x>
+      <y>60</y>
       <width>71</width>
       <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>Copy to A</string>
+     <string>Copy  A</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -176,7 +176,7 @@
      <enum>Qt::ScrollBarAsNeeded</enum>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEdit_3">
+   <widget class="QTextEdit" name="answerText">
     <property name="geometry">
      <rect>
       <x>170</x>
@@ -206,6 +206,45 @@
     </property>
     <property name="text">
      <string>Answer</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>81</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Source : A</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="copyToAButton">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>90</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Copy  to A</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="copyToBButton">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>90</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Copy  to B</string>
     </property>
    </widget>
   </widget>
