@@ -18,6 +18,8 @@ Body::Body(QWidget *parent)
     connect(ui->divButton,SIGNAL(clicked()),SLOT(div()));
     connect(ui->plusButton,SIGNAL(clicked()),SLOT(plus()));
     connect(ui->multButton,SIGNAL(clicked()),SLOT(mult()));
+    connect(ui->actionDev,SIGNAL(triggered()),SLOT(showShort()));
+    connect(ui->actionClean_all,SIGNAL(triggered()),SLOT(clean()));
 }
 
 Body::~Body()
@@ -32,7 +34,7 @@ void Body::sinA(){
     }
     double temp=sin(ui->textEdit->toPlainText().toDouble());
 
-    ui->answerText->setPlainText(QString::number(temp));
+    ui->answerText->setPlainText(QString::number(temp,'d',10));
 }
 void Body::cosA(){
     if(ui->textEdit->toPlainText()==""){
@@ -40,7 +42,7 @@ void Body::cosA(){
         return;
     }
     double temp=cos(ui->textEdit->toPlainText().toDouble());
-    ui->answerText->setPlainText(QString::number(temp));
+    ui->answerText->setPlainText(QString::number(temp,'d',10));
 }
 void Body::minus(){
     if(ui->textEdit->toPlainText()==""){
@@ -52,7 +54,7 @@ void Body::minus(){
         return;
     }
     double temp=(ui->textEdit->toPlainText().toDouble())-(ui->textEdit_2->toPlainText().toDouble());
-    ui->answerText->setPlainText(QString::number(temp));
+    ui->answerText->setPlainText(QString::number(temp,'d',10));
 }
 void Body::plus(){
     if(ui->textEdit->toPlainText()==""){
@@ -64,7 +66,12 @@ void Body::plus(){
         return;
     }
     double temp=(ui->textEdit->toPlainText().toDouble())+(ui->textEdit_2->toPlainText().toDouble());
-    ui->answerText->setPlainText(QString::number(temp));
+    ui->answerText->setPlainText(QString::number(temp,'d',10));
+}
+void Body::clean(){
+    ui->textEdit->clear();
+     ui->textEdit_2->clear();
+      ui->answerText->clear();
 }
 void Body::div(){
     if(ui->textEdit->toPlainText()==""){
@@ -76,7 +83,7 @@ void Body::div(){
         return;
     }
     double temp=(ui->textEdit->toPlainText().toDouble())/(ui->textEdit_2->toPlainText().toDouble());
-    ui->answerText->setPlainText(QString::number(temp));
+    ui->answerText->setPlainText(QString::number(temp,'d',10));
 }
 void Body::mult(){
     if(ui->textEdit->toPlainText()==""){
@@ -102,4 +109,8 @@ void Body::copyToA(){
 }
 void Body::copyToB(){
     ui->textEdit_2->setPlainText(ui->answerText->toPlainText());
+}
+void Body::showShort(){
+    About * dial=new About();
+    dial->show();
 }

@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <cmath>
+#include <about.h>
 QT_BEGIN_NAMESPACE
 namespace Ui { class Body; }
 QT_END_NAMESPACE
@@ -14,7 +15,7 @@ class Body : public QMainWindow
 public:
     Body(QWidget *parent = nullptr);
     ~Body();
-public slots:
+private slots:
     void sinA();
     void cosA();
     void copyA();
@@ -25,6 +26,8 @@ void minus();
 void plus();
 void div();
 void mult();
+void showShort();
+void clean();
 
 private:
     Ui::Body *ui;
