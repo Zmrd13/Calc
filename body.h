@@ -15,11 +15,16 @@ public:
     Body(QWidget *parent = nullptr);
     ~Body();
 public slots:
-    void sinButton();
+    void sinA();
+    void cosA();
     void copyA();
 void copyB();
 void copyToA();
 void copyToB();
+void minus();
+void plus();
+void div();
+void mult();
 
 private:
     Ui::Body *ui;
